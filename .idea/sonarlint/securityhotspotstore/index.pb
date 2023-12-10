@@ -13,3 +13,6 @@ S
 #src/main/java/Pages/signupPage.java,a\6\a67a62a8512e14214bf658eb27be19b6a82ea900
 U
 %src/main/java/Pages/siteHomepage.java,0\a\0adf2ad201c5bcd2d32631c8b71519d6b04ed883
+:
+
+.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302

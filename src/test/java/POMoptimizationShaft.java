@@ -31,7 +31,7 @@ public class POMoptimizationShaft {
         siteHomepage.pressonSignup();
         signupPage.assertSignUppage(testData.getTestData("signupPage.title"));
         //
-        signupPage.fillSignupFormandSubmit(testData.getTestData("signupPage.Name"), testData.getTestData("signupPage.Email"));
+        signupPage.fillSignupFormandSubmit(testData.getTestData("signupPage.Name"), testData.getTestData("signupPage.Email")+System.currentTimeMillis());
         //
         accountInfoPage.assertEnterAccountInfoPage(testData.getTestData("accountInfoPage.title"));
 
