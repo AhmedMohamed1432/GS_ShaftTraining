@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 public class siteHomepage {
     private SHAFT.GUI.WebDriver driver;
 
-    String sitehomePageURL= "https://automationexercise.com/";
+    static String sitehomePageURL= "https://automationexercise.com/";
 
     // Locators
     private final By signupButton = By.xpath("//i[@class=\"fa fa-lock\"]");
