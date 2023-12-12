@@ -27,8 +27,9 @@ public class APIShaft {
        deleteBooking();
     }*/
     @Test
-    public void BookingIDTest(){
+    public void deleteBookingTest(){
         deleteBooking("Jim", "Brown");
+        validatedBookingDeletion();
     }
 
     @BeforeClass
@@ -93,5 +94,9 @@ public class APIShaft {
                 .isEqualTo(expectedadditinalneeds).perform();
         api.verifyThatResponse().body().contains("\"bookingid\":").perform();
     }
+    public void validatedBookingDeletion(){
+        api.assertThatResponse().body().contains("Created").perform();
+    }
+
 
 }
