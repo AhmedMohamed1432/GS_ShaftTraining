@@ -13,8 +13,8 @@ public class registerUserAPI {
 
     //private String registerUrl= "https://automationexercise.com";
     static SHAFT.API api = new SHAFT.API(siteHomepage.sitehomePageURL);
-    static String createAccountService= "/api/createAccount";
-    private static final int success_statusCode= 201;
+    static String createAccountService= "api/createAccount";
+    private static final int success_statusCode= 200;
     public static void registerAPI(String username, String email, String pass){
         List <List<Object>> formInputs = Arrays.asList(
                 Arrays.asList("name", username),

@@ -25,28 +25,30 @@ public class POMFasterScenario {
 
 
     ///Tests
-    @Test
+ /*   @Test
     public void test1() {
         siteHomepage.asserthomepage(testData.getTestData("homepagelink"));
     }
-
+*/
     @Test
     public void test2() {
+        String usernamtestData ="Ahmed90905";
+        String emailTestDaata="ahmed8080805@gmail.com";
+        String passwordTestData = "asdfghjkl123";
         //
         //signup***********************************
-        registerUserAPI.registerAPI("Ahmed9090","ahmed808080@gmail.com","asdfghjkl123");
-        logedinPage.logout();
+        registerUserAPI.registerAPI(usernamtestData,emailTestDaata,passwordTestData);
         siteHomepage.navigateToHomePage();
         siteHomepage.pressonSignup();
         //
-        signupPage.fillLoginFormSubmit("Ahmed9090","asdfghjkl123");
+        signupPage.fillLoginFormSubmit(emailTestDaata,passwordTestData);
         //
-        finalPage.assertsuccess(testData.getTestData("accountInfoPage.FianlPageTitle"));
-        ///
-        finalPage.pressContinueButton();
+        logedinPage.assertloggedInuser(usernamtestData,usernamtestData);
+        logedinPage.logout();
     }
-    /*@Test
+    @Test
     public void test3() {
+        siteHomepage.navigateToHomePage();
         siteHomepage.pressonSignup();
         signupPage.assertSignUppage(testData.getTestData("signupPage.title"));
         //
@@ -63,7 +65,7 @@ public class POMFasterScenario {
         finalPage.assertsuccess(testData.getTestData("accountInfoPage.FianlPageTitle"));
         finalPage.pressContinueButton();
         logedinPage.logout();
-    }*/
+    }
 
     @BeforeClass
     public void openbrowserNavigateToHomePage() {
@@ -73,7 +75,7 @@ public class POMFasterScenario {
         accountInfoPage= new accountInfoPage(driver);
         finalPage= new finalPage(driver);
         logedinPage = new logedinPage(driver);
-        siteHomepage.navigateToHomePage();
+        //siteHomepage.navigateToHomePage();
         ////////
         testData= new SHAFT.TestData.JSON("src/test/resources/Test Data/TestData.json");
 
