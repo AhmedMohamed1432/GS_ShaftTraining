@@ -48,6 +48,7 @@
                     <outputDirectory>target/classes</outputDirectory>
                 </configuration>
             </plugin>
+
         </plugins>
     </build>
     <profiles>
@@ -125,6 +126,12 @@
                                 <groupId>org.junit.jupiter</groupId>
                                 <artifactId>junit-jupiter-engine</artifactId>
                                 <version>${junit-jupiter-engine.version}</version>
+                            </dependency>
+                            <dependency>
+                                <groupId>io.qameta.allure</groupId>
+                                <artifactId>allure-bom</artifactId>
+                                <version>2.25.0</version>
+                                <type>pom</type>
                             </dependency>
                         </dependencies>
                         <configuration>
