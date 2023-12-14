@@ -1,11 +1,7 @@
 package Pages;
-
 import com.shaft.api.RestActions;
 import com.shaft.driver.SHAFT;
 import io.restassured.http.ContentType;
-import org.python.antlr.ast.Str;
-
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.List;
 
@@ -42,8 +38,4 @@ public class registerUserAPI {
                 .setTargetStatusCode(success_statusCode)
                 .perform();
     }
-
-
-
-
 }

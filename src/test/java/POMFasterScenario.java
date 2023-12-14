@@ -32,8 +32,8 @@ public class POMFasterScenario {
 */
     @Test
     public void test2() {
-        String usernamtestData ="Ahmed90905";
-        String emailTestDaata="ahmed8080805@gmail.com";
+        String usernamtestData ="Ahmed90907";
+        String emailTestDaata="ahmed8080807@gmail.com";
         String passwordTestData = "asdfghjkl123";
         //
         //signup***********************************
@@ -52,7 +52,8 @@ public class POMFasterScenario {
         siteHomepage.pressonSignup();
         signupPage.assertSignUppage(testData.getTestData("signupPage.title"));
         //
-        signupPage.fillSignupFormandSubmit(testData.getTestData("signupPage.Name"), testData.getTestData("signupPage.Email")+System.currentTimeMillis());
+        String timeUpdatedEmail = testData.getTestData("signupPage.Email")+System.currentTimeMillis();
+        signupPage.fillSignupFormandSubmit(testData.getTestData("signupPage.Name"), timeUpdatedEmail);
         //
         accountInfoPage.assertEnterAccountInfoPage(testData.getTestData("accountInfoPage.title"));
         accountInfoPage.fillAccountInfoForm(testData.getTestData("accountInfoPage.form.password"), testData.getTestData("accountInfoPage.form.Day"),
